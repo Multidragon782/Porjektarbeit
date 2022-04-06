@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2022-03-25" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="3.1.3103" locale="de_DE">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Vorgang" width="167" order="0"/>
+        <field id="tpd4" name="Anfang" width="65" order="1"/>
+        <field id="tpd5" name="Ende" width="64" order="2"/>
+        <option id="color.recent">
+            <![CDATA[#00ffcc #ff00ff #ff00cc #0000cc #0000ff #3333ff #33ff33 #99ff99 #ff0033]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Ressource" width="210" order="0"/>
+        <field id="1" name="Rolle" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="8" name="Vorgabetermin" color="#8cb6ce" meeting="true" start="2022-06-28" duration="0" complete="0" thirdDate="2022-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="0" name="Bestellung" color="#ff0033" meeting="false" start="2022-03-14" duration="4" complete="0" thirdDate="2022-02-03" thirdDate-constraint="0" expand="true">
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="5" name="Zusammenbau Elektronik" color="#99ff99" meeting="false" start="2022-03-18" duration="14" complete="0" thirdDate="2022-03-18" thirdDate-constraint="0" expand="true">
+            <depend id="16" type="2" difference="0" hardness="Strong"/>
+            <depend id="27" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="16" name="Zusammenbauen Beet" color="#33ff33" meeting="false" start="2022-04-07" duration="17" complete="0" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Befestigung für die Elektronik ans Beet]]>
+            </notes>
+            <depend id="38" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="10" name="Plannung Software" color="#3333ff" meeting="false" start="2022-03-14" duration="14" complete="0" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Klassendiagramm
+Logikdiagramm
+(Sequenzdiagramm)
+]]>
+            </notes>
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="22" name="Methode Programmieren" color="#0000ff" meeting="false" start="2022-04-01" duration="11" complete="0" thirdDate="2022-04-01" thirdDate-constraint="0" expand="true">
+            <depend id="27" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="27" name="Zeitpuffer/Testungsphase mit Elektronik" color="#0000cc" meeting="false" start="2022-04-18" duration="10" complete="0" thirdDate="2022-04-18" thirdDate-constraint="0" expand="true">
+            <depend id="38" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="38" name="Zusammenführung" color="#ff00ff" meeting="false" start="2022-05-02" duration="10" complete="0" thirdDate="2022-04-01" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Zusammenführung:
+Testen und Daten sammeln zum kalibrieren]]>
+            </notes>
+            <depend id="49" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="49" name="Präsentation und Zeitpuffer" color="#00ffcc" meeting="false" start="2022-05-16" duration="31" complete="0" thirdDate="2022-05-16" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Zeitpuffer
+Dokumantion
+]]>
+            </notes>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="1" name="Christian Misovski" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Tobias Wingler" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Niclas Reichert" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Philipp Maag" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="22" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="27" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="16" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="38" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="27" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="38" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="27" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="38" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="27" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="16" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="38" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

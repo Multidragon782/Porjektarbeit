@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.30-05" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="Kike" created="2022-03-22" changedby="Kike" changed="2022-03-25" origin="Structorizer 3.30-05" text="&#34;ReadSerial()&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;Sensor,Messung = read.serial.split('#',2)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<case text="&#34;Sensor&#34;,&#34;D1&#34;,&#34;D2&#34;,&#34;H1&#34;,&#34;T1&#34;,&#34;Error&#34;" comment="" color="ffffff" disabled="0">
+			<qCase>
+				<instruction text="&#34;D1 = Messung&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;D2 = Messeung&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;H1= Messung&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;T1 = Messung&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qCase>
+			<qCase color="ffffff">
+			</qCase>
+		</case>
+	</children>
+</root>
