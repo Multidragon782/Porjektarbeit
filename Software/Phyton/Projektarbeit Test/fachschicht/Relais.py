@@ -19,29 +19,30 @@ GPIO.setup(16, GPIO.OUT, initial=GPIO.LOW)      #Pumpe
 GPIO.setup(13, GPIO.OUT, initial=GPIO.LOW)     #Ventil
 
 #Wasserschleuße
-class WasserschleußeAN()
+def WasserschleusseAN():
     GPIO.output(10, GPIO.HIGH)
 
-class WasserschleußeAUS()
+
+def WasserschleusseAUS():
     GPIO.output(10, GPIO.LOW)
 
 #Pumpe
-class PumpeAN:
+def PumpeAN():
     GPIO.output(8, GPIO.HIGH)
 
-class PumpeAUS:
+def PumpeAUS():
     GPIO.output(8, GPIO.LOW)
 
 #Licht
-class LichtAN:
+def LichtAN():
     GPIO.output(6, GPIO.HIGH)
 
-class LichtAUS:
+def LichtAUS():
     GPIO.output(6, GPIO.LOW)
 
 #Lüfter
-class LüfterAN:
+def LuefterAN():
     GPIO.output(4, GPIO.HIGH)
 
-class LüfterAUS:
+def LuefterAUS():
     GPIO.output(4, GPIO.LOW)

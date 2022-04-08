@@ -8,7 +8,7 @@
 # Copyright:   (c) 400144 2022
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
-class Datenverwertung
+class Datenverwertung:
 
 Dirt = 0
 Hum = 0
@@ -20,55 +20,50 @@ Bodenfeuchtigkeit5Sec = [None] * 12
 
 Luftfeuchtigkeit15Min = [None] * 4
 
- def __init__(self):
+
+def __init__(self):
     pass
 
-def getTemperartur()
-    TemperaturProMin.append()
-    TemperaturProMin.pop(0)
-    pass
+    def getTemperartur():
+        TemperaturProMin.append()
+        TemperaturProMin.pop(0)
 
-def getBodenfeuchtigkeit()
-    Bodenfeuchtigkeit5Sec.append()
-    Bodenfeuchtigkeit5Sec.pop(0)
-        pass
 
-def getLuftfeuchtigkeit()
-    Luftfeuchtigkeit15Min.append()
-    Luftfeuchtigkeit15Min.pop(0)
-        pass
+    def getBodenfeuchtigkeit():
+        Bodenfeuchtigkeit5Sec.append()
+        Bodenfeuchtigkeit5Sec.pop(0)
 
-def berechneAvgHum()
-    i = 0
-    AvgHumRaw = 0
+    def getLuftfeuchtigkeit():
+        Luftfeuchtigkeit15Min.append()
+        Luftfeuchtigkeit15Min.pop(0)
 
-    while i =! 3
-        AvgHumRaw = AvgHumRaw + Luftfeuchtigkeit15Min[i]
+    def berechneAvgHum():
+        i = 0
+        AvgHumRaw = 0
 
-    AvgHum = AvgHumRaw /4
+        while i != 3:
+            AvgHumRaw = AvgHumRaw + Luftfeuchtigkeit15Min[i]
 
-    pass
+        AvgHum = AvgHumRaw /4
 
-def berechneAvgDirt()
+
+def berechneAvgDirt():
     i = 0
     AvgDirtRaw = 0
 
-    while i =! 11
+    while i != 11:
         AvgDirtRaw = AvgDirtRaw + Bodenfeuchtigkeit5Sec[i]
 
     AvgDirt = AvgDirtRaw / 12
 
-    pass
 
-def berechneAvgTemp()
- i = 0
-    AvgTempRaw = 0
+    def berechneAvgTemp():
+    i = 0
+        AvgTempRaw = 0
+        while i != 59:
+            AvgTempRaw = AvgTempRaw + TemperaturProMin[i]
 
-    while i =! 59
-        AvgTempRaw = AvgTempRaw + TemperaturProMin[i]
+        AvgTemp = AvgTempRaw / 60
 
-    AvgTemp = AvgTempRaw / 60
-
-    pass
 
 
