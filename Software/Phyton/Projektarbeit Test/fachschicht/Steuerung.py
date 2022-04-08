@@ -9,43 +9,43 @@
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 
-class Steuerung:
-
-
 import GUI as G
 import Datenverwertung as Dv
 import Relais as Rl
-import LesungderDaten as LD
+import ReadSerial as rd
+
+class Steuerung:
 
 
-def StartebrechneAvgHum()
-
-    pass
-
-def StartebrechneAvgDirt()
+def StartebrechneAvgHum():
 
     pass
 
-
-def StartebrechneAvgTenp()
+def StartebrechneAvgDirt():
 
     pass
 
-def SchalteRelaisHum()
+
+def StartebrechneAvgTenp():
+
+    pass
+
+def SchalteRelaisHum():
     #type boolean
     pass
 
-def SchalteRelaisTemp()
-    #type boolean
-	pass
-
-def SchalteRelaisLuft()
+def SchalteRelaisTemp():
     #type boolean
 	pass
 
-def SchalteRelaisLichter()
+def SchalteRelaisLuft():
+    #type boolean
+	pass
+
+def SchalteRelaisLichter():
     #type boolean
     pass
 
 while 1>0
- Dv.PruefeDirtHumTemp
+ Dv.PruefeDirtHumTemp:
+

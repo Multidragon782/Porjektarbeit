@@ -19,15 +19,14 @@ class ReadSerial:
         time.sleep(5)
         while True:
             rawdata = serial.readline()
-            Sensor = str(0)
-            SensorData = float(0)
-            Sensor,SensorData == rawdata.split('#', 2)
-            if Sensor == "D1" :
-                var = D1 == SensorData
-            elif Sensor == "D2" :
-                var = D2 == SensorData
-            elif Sensor == "H1" :
-                H1 == SensorData
-            elif Sensor == "T1" :
-                T1 == SensorData
+            Sensor = [0]*2
+            Sensor == rawdata.split('#', 2)
+            if Sensor[0] == "D1" :
+                D1 == Sensor[1]
+            elif Sensor[0] == "D2" :
+                D2 == Sensor[1]
+            elif Sensor[0] == "H1" :
+                H1 == Sensor[1]
+            elif Sensor[0] == "T1" :
+                T1 == Sensor[1]
 
