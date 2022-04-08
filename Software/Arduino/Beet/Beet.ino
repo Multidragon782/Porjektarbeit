@@ -2,7 +2,7 @@
 
 #include "DHT.h" //DHT Bibliothek laden
 
-#define DHTPIN 4 //Der Sensor wird an PIN 2 angeschlossen    
+#define DHTPIN 2 //Der Sensor wird an PIN 2 angeschlossen    
 
 #define DHTTYPE DHT11    // Es handelt sich um den DHT11 Sensor
 
@@ -22,13 +22,14 @@ HumSen1 = dht.readHumidity(); //Luftfeuchtigkeit auslesen und in „HumSen1“ s
 TempSen1 = dht.readTemperature(); //Temperatur auslesen und in „TempSen1“ speichern
 
 
-//Serial.print("D1#");
-//Serial.println(DirtSen1);// Bodensensor 1 (DirtSen1) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "D1"
-//Serial.println("D2#");
-//Serial.print(DirtSen2);// Bodensensor 2 (DirtSen2) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "D2"
-Serial.print("H1#");
-Serial.println(HumSen1);// Luftfeuchtigkeitsensor 1 (Hum1) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "H1"
-Serial.print("T1#"); 
-Serial.println(TempSen1);//TemperaturSensor 1 (DirtSen1) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "T1"
+String strDirtSen1 = "D1#" + DirtSen1;
+String strDirtSen2 = "D2#" + DirtSen2;
+String strHumSen1 = "H1#" + HumSen1;
+String strTemp1 = "T1" + TempSen1;
+
+Serial.println(serDirtSen1);// Bodensensor 1 (DirtSen1) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "D1"
+Serial.print(strDirtsen2);// Bodensensor 2 (DirtSen2) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "D2"
+Serial.println(str HumSen1);// Luftfeuchtigkeitsensor 1 (Hum1) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "H1"
+Serial.println(strTempSen1);//TemperaturSensor 1 (DirtSen1) wird über Serielle Schnittstelle geschickt,mit dem Vorcode "T1"
 delay(1000); //Warte 1000 milisekunden
 }
