@@ -10,34 +10,35 @@
 #-------------------------------------------------------------------------------
 class Datenverwertung:
 
-Dirt = 0
-Hum = 0
-Temp = 0
+    Dirt = 0
+    Hum = 0
+    Temp = 0
 
-TemperaturProMin = [None] * 60
+    TemperaturProMin = [None] * 60
 
-Bodenfeuchtigkeit5Sec = [None] * 12
+    Bodenfeuchtigkeit5Sec = [None] * 12
 
-Luftfeuchtigkeit15Min = [None] * 4
+    Luftfeuchtigkeit15Min = [None] * 4
 
 
-def __init__(self):
-    pass
 
-    def getTemperartur():
+    def getTemperartur(self):
         TemperaturProMin.append()
         TemperaturProMin.pop(0)
 
 
-    def getBodenfeuchtigkeit():
+
+    def getBodenfeuchtigkeit(self):
         Bodenfeuchtigkeit5Sec.append()
         Bodenfeuchtigkeit5Sec.pop(0)
 
-    def getLuftfeuchtigkeit():
+
+    def getLuftfeuchtigkeit(self):
         Luftfeuchtigkeit15Min.append()
         Luftfeuchtigkeit15Min.pop(0)
 
-    def berechneAvgHum():
+
+    def berechneAvgHum(self):
         i = 0
         AvgHumRaw = 0
 
@@ -47,18 +48,19 @@ def __init__(self):
         AvgHum = AvgHumRaw /4
 
 
-def berechneAvgDirt():
-    i = 0
-    AvgDirtRaw = 0
+    def berechneAvgDirt(self):
+        i = 0
+        AvgDirtRaw = 0
 
-    while i != 11:
-        AvgDirtRaw = AvgDirtRaw + Bodenfeuchtigkeit5Sec[i]
+        while i != 11:
+            AvgDirtRaw = AvgDirtRaw + Bodenfeuchtigkeit5Sec[i]
 
-    AvgDirt = AvgDirtRaw / 12
+        AvgDirt = AvgDirtRaw / 12
 
 
-    def berechneAvgTemp():
-    i = 0
+
+    def berechneAvgTemp(self):
+        i = 0
         AvgTempRaw = 0
         while i != 59:
             AvgTempRaw = AvgTempRaw + TemperaturProMin[i]
@@ -67,3 +69,14 @@ def berechneAvgDirt():
 
 
 
+    def PruefeDirtHumTemp(self):
+
+        berechneAvgHum()
+        berechneAVgDirt()
+        berechneAvgTemp()
+        """
+
+
+
+        """
+        pass

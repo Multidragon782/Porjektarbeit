@@ -13,8 +13,13 @@ import GUI as G
 import Datenverwertung as Dv
 import Relais as Rl
 import ReadSerial as rd
+import multiprocessing
+import os
 
 class Steuerung:
+
+    Serialloop =  multiprocessing.Process(target=rd.ReadSerial)
+    Serialloop.Start
 
 
 def StartebrechneAvgHum():
@@ -46,6 +51,6 @@ def SchalteRelaisLichter():
     #type boolean
     pass
 
-while 1>0
- Dv.PruefeDirtHumTemp:
+while True:
+ Dv.PruefeDirtHumTemp
 

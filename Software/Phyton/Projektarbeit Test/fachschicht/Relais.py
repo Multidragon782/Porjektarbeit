@@ -20,11 +20,11 @@ GPIO.setup(13, GPIO.OUT, initial=GPIO.LOW)     #Ventil
 
 #Wasserschleuße
 def WasserschleusseAN():
-    GPIO.output(10, GPIO.HIGH)
+    GPIO.output(10, GPIO.LOW)
 
 
 def WasserschleusseAUS():
-    GPIO.output(10, GPIO.LOW)
+    GPIO.output(10, GPIO.HIGH)
 
 #Pumpe
 def PumpeAN():
