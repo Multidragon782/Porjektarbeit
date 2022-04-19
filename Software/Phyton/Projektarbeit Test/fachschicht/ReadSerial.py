@@ -8,6 +8,9 @@ D2 = float(0)
 H1 = float(0)
 T1 = float(0)
 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(16, GPIO.OUT, initial=GPIO.LOW) // SendPin
+
 
 class ReadSerial:
 
@@ -18,8 +21,20 @@ class ReadSerial:
         Serial = serial.Serial('/dev/ttyACM0', 9600) #Port muss davor noch defeniert werden, Alles mit Baudrate von 9600
         Serial.open()
         time.sleep(5)
-        while True:
+
+        finsihedReading = false;
+        GPIO.output(16, GPIO.HIGH)
+
+
+        while finsihedReading == false:
+
             rawdata = serial.readline()
+
+            if  "$" == rawdata:
+                GPIO.output(16, GPIO.LOW)
+                finsihedReading = true;
+                break
+
             Sensor = [0]*2
             Sensor = rawdata.split('#', 2)
             if "D1" == Sensor[0]:
