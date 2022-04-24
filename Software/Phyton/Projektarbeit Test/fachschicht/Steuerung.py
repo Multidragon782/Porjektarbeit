@@ -12,27 +12,28 @@
 import GUI as G
 import Datenverwertung as Dv
 import Relais as Rl
-import ReadSerial as rd
+import ReadSerial as Rd
 import multiprocessing
 import os
 
 class Steuerung:
 
-    Serialloop =  multiprocessing.Process(target=rd.ReadSerial)
+    Serialloop =  multiprocessing.Process(target=Rd.ReadSerial)
     Serialloop.Start
 
 
 def StartebrechneAvgHum():
-
+   if Dv.berechneAvgHum / G.HumBedingung > 1.1 or Dv.berechneAvgHum / G.HumBedingung < 0.9:
+        hum = 0
     pass
 
 def StartebrechneAvgDirt():
-
+    Dv.berechneAvgDirt
     pass
 
 
-def StartebrechneAvgTenp():
-
+def StartebrechneAvgTemp():
+    Dv.berechneAvgTemp
     pass
 
 def SchalteRelaisHum():

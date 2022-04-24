@@ -44,6 +44,7 @@ class Datenverwertung:
 
         while i != 3:
             AvgHumRaw = AvgHumRaw + Luftfeuchtigkeit15Min[i]
+            i += 1
 
         AvgHum = AvgHumRaw /4
 
@@ -54,6 +55,7 @@ class Datenverwertung:
 
         while i != 11:
             AvgDirtRaw = AvgDirtRaw + Bodenfeuchtigkeit5Sec[i]
+            i += 1
 
         AvgDirt = AvgDirtRaw / 12
 
@@ -64,6 +66,7 @@ class Datenverwertung:
         AvgTempRaw = 0
         while i != 59:
             AvgTempRaw = AvgTempRaw + TemperaturProMin[i]
+            i += 1
 
         AvgTemp = AvgTempRaw / 60
 
