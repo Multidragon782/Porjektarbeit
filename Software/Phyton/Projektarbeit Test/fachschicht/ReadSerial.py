@@ -30,7 +30,7 @@ class ReadSerial:
 
             rawdata = serial.readline()
 
-            if  "$" == rawdata:
+            if "$" == rawdata:
                 GPIO.output(16, GPIO.LOW)
                 finsihedReading = true;
                 break
