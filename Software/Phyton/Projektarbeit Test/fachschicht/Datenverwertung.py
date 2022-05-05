@@ -1,18 +1,9 @@
-#-------------------------------------------------------------------------------
-# Name:        Datenverwertung
-# Purpose:
-#
-# Author:      400144
-#
-# Created:     05.04.2022
-# Copyright:   (c) 400144 2022
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
 class Datenverwertung:
 
     Dirt = 0
     Hum = 0
     Temp = 0
+
 
     TemperaturProMin = [None] * 60
 
@@ -71,15 +62,25 @@ class Datenverwertung:
         AvgTemp = AvgTempRaw / 60
 
 
-
-    def PruefeDirtHumTemp(self):
-
-        berechneAvgHum()
-        berechneAVgDirt()
-        berechneAvgTemp()
-        """
-
+    def PruefeHum(HumOp)
+        if   berechneAvgHum / HumOp > 1.1:
+            True
+        
+        elif berechneAvgHum / HumOp <= 1.1:
+            False
 
 
-        """
-        pass
+    def PruefeTemp(TempOp)
+        if   berechneAvgTemp / TempOp > 1.1: 
+            True
+        
+        elif berechneAvgTemp / TempOp <= 1.1:
+            False
+    
+           
+     def PruefeDirt(DirtOp)
+         if   berechneAvgDirt / DirtOp >= 0.9: #Wasser aus
+            True
+        
+        elif berechneAvgDirt / DirtOp < 0.9:   #Wasser an
+            False 

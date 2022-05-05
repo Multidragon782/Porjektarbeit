@@ -1,14 +1,3 @@
-#-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      400148
-#
-# Created:     05.04.2022
-# Copyright:   (c) 400148 2022
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
-
 import GUI as G
 import Datenverwertung as Dv
 import Relais as Rl
@@ -18,40 +7,32 @@ import os
 
 class Steuerung:
 
-    Serialloop =  multiprocessing.Process(target=Rd.ReadSerial)
-    Serialloop.Start
+    Rd.ReadSerial
+    SchalteRelaisHumTemp
+    SchalteRelaisLichter
+    SchalteRelaisWasseer
 
+    def SchalteRelaisHumTemp():
+        if Dv.PruefeHum or Dv.PruefeTemp
+                Rl.LuefterAN
+    
+        else Rl.LuefterAUS  
 
-def StartebrechneAvgHum():
-   if Dv.berechneAvgHum / G.HumBedingung > 1.1 or Dv.berechneAvgHum / G.HumBedingung < 0.9:
-        hum = 0
-    pass
+        pass
 
-def StartebrechneAvgDirt():
-    Dv.berechneAvgDirt
-    pass
+    def SchalteRelaisLichter():
+        #type boolean
+         
+        pass
 
+    def SchalteRelaisWasseer():
+         if Dv.PruefeDirt
+             Rl.WasserschleusseAN
 
-def StartebrechneAvgTemp():
-    Dv.berechneAvgTemp
-    pass
+         else Rl.WasserschleusseAUS
 
-def SchalteRelaisHum():
-    #type boolean
-    pass
+        pass
 
-def SchalteRelaisTemp():
-    #type boolean
-	pass
+    while True:
 
-def SchalteRelaisLuft():
-    #type boolean
-	pass
-
-def SchalteRelaisLichter():
-    #type boolean
-    pass
-
-while True:
- Dv.PruefeDirtHumTemp
 
